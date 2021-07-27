@@ -19,7 +19,7 @@ const userSchema = new schema({
         require: true
     },
     affiliateId: {
-        type: String,
+        type: schema.Types.ObjectId,
         ref: "Affiliate"
     }
 })
