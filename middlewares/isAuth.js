@@ -4,7 +4,7 @@ const Exceptions = require("../utils/custom-exceptions")
 
 exports.authentication = async (req, res, next) => {
     try {
-        const token = req.headers["authorization"];
+        const token = req.headers["x-auth-token"] || req.headers["authorization"]
 
         if (token === null) throw new Exceptions.NotFound
 
