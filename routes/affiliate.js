@@ -8,5 +8,6 @@ const { addAffiliateSchema, getAffiliateSchema } = require("../validation/affili
 router
     .post("/add", authentication, validation(addAffiliateSchema), affiliate.addAffiliate)
     .post("/get", authentication, validation(getAffiliateSchema), affiliate.getAffiliate)
+    .get("/get-all", authentication, affiliate.getAllAffiliate)
 
 module.exports = router
