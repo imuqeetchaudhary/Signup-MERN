@@ -9,7 +9,9 @@ exports.profile = promise(async (req, res) => {
     res.status(200).json({
         _id: user._id,
         name: user.name,
-        email: user.email
+        email: user.email,
+        userType: user.userType,
+        affiliate: user.affiliate
     })
 })
 
@@ -41,7 +43,8 @@ exports.login = promise(async (req, res) => {
         _id: user._id,
         name: user.name,
         email: user.email,
-        isAdmin: user.isAdmin
+        userType: user.userType,
+        role: user.role
     }, process.env.ACCESS_TOKEN_SECRET)
 
     res.status(200).json({
@@ -49,6 +52,7 @@ exports.login = promise(async (req, res) => {
         _id: user._id,
         name: user.name,
         email: user.email,
-        isAdmin: user.isAdmin
+        userType: user.userType,
+        role: user.role
     })
 })

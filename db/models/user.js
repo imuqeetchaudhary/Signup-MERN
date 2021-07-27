@@ -14,9 +14,13 @@ const userSchema = new schema({
         type: String,
         require: true
     },
-    isAdmin: {
-        type: Boolean,
-        default: false
+    userType: {
+        type: String,
+        require: true
+    },
+    affiliateId: {
+        type: String,
+        ref: "Affiliate"
     }
 })
 
