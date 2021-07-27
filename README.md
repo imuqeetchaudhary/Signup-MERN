@@ -1,5 +1,16 @@
 # Signup MERN Rest Api
 
+## Backend deployed link
+
+https://signup-mern-restapi.herokuapp.com/
+
+### Admin Credentials
+
+```
+email: admin@gmail.com
+password: Ab12#$
+```
+
 ## Routes for User
 
 ### to register a new user
@@ -9,6 +20,18 @@
 ```
 {
     name:
+    email:
+    userType:
+    affiliateId:
+}
+```
+
+### to create a user password
+
+- user/create-password : post
+
+```
+{
     email:
     password:
 }
@@ -25,6 +48,28 @@
 }
 ```
 
-### to view the profile of an authenticated user
+## Routes for affiliates
 
-- user/profile :post
+### to add a new affiliate
+
+- affiliate/add :post
+
+```
+{
+    name:
+}
+```
+
+### to get all affiliates
+
+- affiliate/get-all :get
+
+### to get a specific affiliate
+
+- affiliate/get :get
+
+```
+{
+    affiliateId:
+}
+```
