@@ -45,7 +45,7 @@ exports.register = promise(async (req, res) => {
 
         await newUser.save()
         res.status(200).json({ message: "Successfully added new user" })
-        const message = `Hey ${body.name}! You're successfully registered with email ${body.email}. Kindly create your password using this link ${"http://localhost:3000/create-password"}`
+        const message = `Hey ${body.name}! You're successfully registered with email ${body.email}. Kindly create your password using this link ${"https://affiliate-app.netlify.app/#/create-password"}`
         sendMail(body.email, message)
     }
     else {
